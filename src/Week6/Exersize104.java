@@ -38,13 +38,11 @@ public class Exersize104 {
         int num1 = array[index1];
         int num2 = array[index2];
 
-        if (num1 != num2) {
-            for (int i = 0; i < array.length; i++) {
-                if (array[i] == num1) {
-                    array[i] = num2;
-                } else if (array[i] == num2) {
-                    array[i] = num1;
-                }
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == num1) {
+                array[i] = num2;
+            } else if (array[i] == num2) {
+                array[i] = num1;
             }
         }
     }
@@ -53,15 +51,12 @@ public class Exersize104 {
         for (int i = 0; i < array.length; i++) {
             int smallest = indexOfTheSmallestStartingFrom(array, i);
             swap(array, i, smallest);
-            System.out.println(Arrays.toString(array));
         }
     }
 
 
     public static void main(String[] args) {
-        int[] values = {8, 34, 8, 5, 1, 3, 4, 15423, 42};
-
-        System.out.println(Arrays.toString(values));
+        int[] values = {8, 3, 7, 9, 1, 2, 4};
         sort(values);
 
     }
